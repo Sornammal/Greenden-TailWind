@@ -13,7 +13,7 @@
     <!-- Nav bar responsive content -->
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">GREENDEN</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -25,14 +25,27 @@
         </ul>
 
     </nav>
+
+    <!-- side bar -->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100vh;right: -50%;">
+        <div class="text-right p-5">
+            <p id="close-nav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600">
+            <li class="hover:underline hover:text-black"><a href="index.html">Home</a></li>
+            <li class="hover:underline hover:text-black"><a href="product.html">Products</a></li>
+            <li class="hover:underline hover:text-black"><a href="contact.html">Contacts</a></li>
+        </ul>
+    </section>
+
     <!-- best seller section -->
     <section class="p-4 text-center">
         <h1 class="font-bold mt-5 text-3xl">Best seller</h1>
         <br>
-        <input type="text" placeholder="Search for a product..." class="border border-black rounded-md p-2 m-3"
+        <input id="search" type="text" placeholder="Search for a product..." class="border border-black rounded-md p-2 m-3"
             style="width: 80%;">
         <br>
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
+        <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
             <div>
                 <img src="./images/Best seller image -1.jpg" alt=""
                     class="inline hover:shadow-xl transform hover:-translate-y-2">
@@ -43,21 +56,21 @@
             <div>
                 <img src="./images/Best seller image -2.jpg" alt=""
                     class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <h1>Rose Plant</h1>
+                <h1>Lilly Plant</h1>
                 <p>$20</p>
             </div>
 
             <div>
                 <img src="./images/Best seller image -3.jpg" alt=""
                     class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <h1>Rose Plant</h1>
+                <h1>Acacia Plant</h1>
                 <p>$20</p>
             </div>
 
             <div>
                 <img src="./images/Best seller image -4.jpg" alt=""
                     class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <h1>Rose Plant</h1>
+                <h1>African daisy Plant</h1>
                 <p>$20</p>
             </div>
 
@@ -71,21 +84,21 @@
             <div>
                 <img src="./images/Best seller image -6.jpg" alt=""
                     class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <h1>Rose Plant</h1>
+                <h1>Anemone Plant</h1>
                 <p>$20</p>
             </div>
 
             <div>
                 <img src="./images/Best seller image -7.jpg" alt=""
                     class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <h1>Rose Plant</h1>
+                <h1>Begonia Plant</h1>
                 <p>$20</p>
             </div>
 
             <div>
                 <img src="./images/Best seller image -4.jpg" alt=""
                     class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <h1>Rose Plant</h1>
+                <h1>Bell flower Plant</h1>
                 <p>$20</p>
             </div>
 
@@ -99,6 +112,7 @@
             interest.</p>
         <p class="mb-5">&copy; 2021 Greenday.com</p>
     </section>
+    <script src="./product.js"></script>
 </body>
 
 </html>
